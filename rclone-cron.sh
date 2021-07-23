@@ -2,5 +2,10 @@
 if pidof -o %PPID -x “rclone-cron.sh”; then
 exit 1
 fi
-rclone sync gdrive: --exclude /adobe/* onedrive: --exclude /adobe/* -vP --use-mmap --log-file /home/dicksonchiang96/log/sync_$(date '+%Y%m%d%H%M').log
+logfile="/home/dicksonchiang96/log/check_sync.log"
+rclone check onedrive:_backup gdrive:_backup --exclude /adobe/* --log-file $logfile || {
+	missing=$(cat $logfile | grep -oE "[0-9]+ differences" | tail -1 | grep -oE "[0-9]+")
+	rm $logfile
+	./script/telegram_notify_sync.py $missing
+} 
 exit
