@@ -22,4 +22,5 @@ toggle-file.vbs : VBS script to create the trigger when it's not present, or del
 rclone-prompt.cmd : Batch script to check the presence of trigger file, run rclone sync if yes. AutomProvide simple GUI to skip the sync.
 rclone-forcedsync.cmd : Batch script to force run an rclone sync whether or not the trigger is present.
 rclone-forcedsync-delay.cmd : rclone-forcedsync.cmd with customizable delay prior syncing.
+rclone-forcedsync-shutdown.cmd : rclone-forcedsync.cmd with shutdown after syncing.
 Task scheduler setting: Set create-file.vbs to run on a daily basis. Set rclone-prompt.cmd to run daily or when idle.
