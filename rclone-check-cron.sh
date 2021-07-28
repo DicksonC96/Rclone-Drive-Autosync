@@ -1,5 +1,5 @@
 #!/bin/bash
-if pidof -o %PPID -x “rclone-cron.sh”; then
+if pidof -o %PPID -x “rclone-check-cron.sh”; then
 exit 1
 fi
 logfile="/home/dicksonchiang96/log/check_sync.log"
