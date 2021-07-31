@@ -1,7 +1,7 @@
 # Rclone-Drive-Autosync
 The scripts present in this repo functions to automate the sync between virtual storage system using Rclone.
-** Rclone must be initialized on your linux machine/ windows machine to work
-** This is not meant to provide a concise or verbose tutorial for how to automate rclone syncing or rclone checking.
+  ** Rclone must be initialized on your linux machine/ windows machine to work
+  ** This is not meant to provide a concise or verbose tutorial for how to automate rclone syncing or rclone checking.
 
 ## On virtual Linux machine (Running on GCP to check if the drives require synchronization)
 ### Rclone schedule check if sync is needed
