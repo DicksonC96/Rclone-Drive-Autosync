@@ -10,7 +10,7 @@ then
 signal=error
 elif [[ $(cat $logfile | grep -v ..:..:.. | tail -5 | grep "Deleted:") ]]
 then
-signall=synced
+signal=synced
 elif [[ $(cat $logfile | grep -v ..:..:.. | tail -5 | grep "0 / 0 Byte") ]]
 then
 exit
